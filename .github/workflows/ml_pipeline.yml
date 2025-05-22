@@ -1,0 +1,49 @@
+name: ML Training Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  MLFLOW_PORT: "5000"
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install mlflow torch torchvision tqdm scikit-learn matplotlib gunicorn
+
+      - name: Start MLflow Server
+        run: |
+          mlflow server --host 0.0.0.0 --port 5000 &
+          sleep 5
+
+      - name: Train model
+        run: |
+          sleep 5
+          python train.py \
+            --tracking-uri http://localhost:${{ env.MLFLOW_PORT }} \
+            --epochs 1 \
+            --batch-size 256 \
+            --lr 0.001
+      - name: Validate model quality
+        run: |
+          python validate_quality.py
+
+      - name: Save MLflow data
+        uses: actions/cache/save@v3
+        with:
+          path: ./mlruns
+          key: ${{ steps.cache-mlflow.outputs.cache-primary-key }}

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/pavelvasilev/Documents/mlflow-cifar-classfication/mlruns/0/c016f50b505b4252bca2342434aa0291/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c016f50b505b4252bca2342434aa0291
+run_name: traveling-doe-577
+run_uuid: c016f50b505b4252bca2342434aa0291
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746493506839
+status: 1
+tags: []
+user_id: pavelvasilev

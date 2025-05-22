@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/pavelvasilev/Documents/mlflow-cifar-classfication/mlruns/0/47ab9303b88a436ebba67ba98de376bd/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 47ab9303b88a436ebba67ba98de376bd
+run_name: unequaled-pig-251
+run_uuid: 47ab9303b88a436ebba67ba98de376bd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746493218324
+status: 1
+tags: []
+user_id: pavelvasilev

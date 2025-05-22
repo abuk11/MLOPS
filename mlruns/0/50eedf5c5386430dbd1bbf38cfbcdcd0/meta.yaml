@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/pavelvasilev/Documents/mlflow-cifar-classfication/mlruns/0/50eedf5c5386430dbd1bbf38cfbcdcd0/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 50eedf5c5386430dbd1bbf38cfbcdcd0
+run_name: righteous-ray-947
+run_uuid: 50eedf5c5386430dbd1bbf38cfbcdcd0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746493119303
+status: 1
+tags: []
+user_id: pavelvasilev

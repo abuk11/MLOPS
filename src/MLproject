@@ -1,0 +1,12 @@
+name: cifar-classification
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      epochs: {type: int, default: 2}
+      batch_size: {type: int, default: 128}
+      lr: {type: float, default: 1e-3}
+    command: >
+      python train.py --epochs {epochs} --batch-size {batch_size} --lr {lr}
